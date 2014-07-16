@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Ember-Graph</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic'
+		      rel='stylesheet' type='text/css'>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="../stylesheets/style.css">
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="http://ember-graph.com" target="ext">
+						<b>Ember-Graph</b>
+					</a>
+					<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Guides</a></li>
+						<li class="active"><a href="#">API</a></li>
+					</ul>
+					<ul class="nav pull-right navbar-nav">
+						<li>
+							<a href="https://github.com/gordonkristan/ember-graph">
+								<i class="fa fa-lg fa-github"></i> View on GitHub
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+	<div class="row">
+		<div class="col-md-3 well side-nav">
+			<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Namespaces</strong>
+		</h4>
+	</li>
+	<li class="">
+		<a href="EG.html"><small>EmberGraph</small></a>
+	</li>
+	<li class="">
+		<a href="#"><small>String</small></a>
+	</li>
+</ul>
+
+<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Classes</strong>
+		</h4>
+	</li>
+	
+		<li class="">
+			<a href="Adapter.html">
+				<small>Adapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ArrayType.html">
+				<small>ArrayType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="AttributeType.html">
+				<small>AttributeType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="BooleanType.html">
+				<small>BooleanType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="DateType.html">
+				<small>DateType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabase.html">
+				<small>EmberGraphDatabase</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabaseAdapter.html">
+				<small>EmberGraphDatabaseAdapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabaseSerializer.html">
+				<small>EmberGraphDatabaseSerializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EnumType.html">
+				<small>EnumType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="JSONSerializer.html">
+				<small>JSONSerializer</small>
+			</a>
+		</li>
+	
+		<li class="active">
+			<a href="Model.html">
+				<small>Model</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ModelPromiseObject.html">
+				<small>ModelPromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="NumberType.html">
+				<small>NumberType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ObjectType.html">
+				<small>ObjectType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseArray.html">
+				<small>PromiseArray</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseObject.html">
+				<small>PromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="RESTAdapter.html">
+				<small>RESTAdapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Serializer.html">
+				<small>Serializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Store.html">
+				<small>Store</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="StringType.html">
+				<small>StringType</small>
+			</a>
+		</li>
+	
+</ul>
+		</div>
+		<div class="col-md-9 api-contents">
+			
+				
+					<div class="api-page-header">
+						<h1>
+							<i class="fa fa-code"></i> Model Class
+						</h1>
+						<hr>
+					</div>
+
+					<div class="api-metadata">
+						
+
+						
+							<strong>Uses:</strong>
+							<a href="#">Ember.Evented</a>
+							<br>
+						
+
+						<strong>Defined in:</strong>
+						<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L1">
+							src/model/model.js:1
+						</a>
+					</div>
+					<br>
+					<p><p>Models are the classes that represent your domain data.
+Each type of object in your domain should have its own
+model, with attributes and relationships declared using the
+<a href="EG.html#method_attr">attr</a>, <a href="EG.html#method_hasOne">hasOne</a>
+and <a href="EG.html#method_hasMany">hasMany</a> functions.</p>
+<p>To create a model, subclass this class (or any other Model
+subclass) and place it your app&#39;s namespace. The name
+that you give it is important, since that&#39;s how it will be
+looked up by the container. The usual convention is to use
+a camel-cased name like <code>App.PostComment</code> or <code>App.ForumAdmin</code>.
+For more information on resolving, read the Ember.js entry
+on the <a href="http://emberjs.com/api/classes/Ember.DefaultResolver.html">DefaultResolver</a>.</p>
+</p>
+				
+			
+
+			
+
+			
+				<div class="api-index">
+		<ul class="nav nav-tabs nav-justified">
+			<li>
+				<a href="#index">Index</a>
+			</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+		</ul>
+
+		<div class="tab-content contents">
+			<div class="tab-pane active" id="index">
+				<h3>Properties</h3>
+
+	<ul class="list-unstyled">
+		
+			<li>
+				<a href="#property_attributes">attributes</a>
+			</li>
+		
+			<li>
+				<a href="#property_id">id</a>
+			</li>
+		
+			<li>
+				<a href="#property_store">store</a>
+			</li>
+		
+			<li>
+				<a href="#property_temporaryIdPrefix">temporaryIdPrefix</a>
+			</li>
+		
+			<li>
+				<a href="#property_typeKey">typeKey</a>
+			</li>
+		
+	</ul>
+
+
+
+	<h3>Methods</h3>
+
+	<ul class="list-unstyled">
+		
+			<li>
+				<a href="#method_changedAttributes">changedAttributes</a>
+			</li>
+		
+			<li>
+				<a href="#method_destroy">destroy</a>
+			</li>
+		
+			<li>
+				<a href="#method_eachAttribute">eachAttribute</a>
+			</li>
+		
+			<li>
+				<a href="#method_eachRelationship">eachRelationship</a>
+			</li>
+		
+			<li>
+				<a href="#method_extend">extend</a>
+			</li>
+		
+			<li>
+				<a href="#method_isAttribute">isAttribute</a>
+			</li>
+		
+			<li>
+				<a href="#method_isEqual">isEqual</a>
+			</li>
+		
+			<li>
+				<a href="#method_isTemporaryId">isTemporaryId</a>
+			</li>
+		
+			<li>
+				<a href="#method_loadData">loadData</a>
+			</li>
+		
+			<li>
+				<a href="#method_loadDataFromClient">loadDataFromClient</a>
+			</li>
+		
+			<li>
+				<a href="#method_loadDataFromServer">loadDataFromServer</a>
+			</li>
+		
+			<li>
+				<a href="#method_metaForAttribute">metaForAttribute</a>
+			</li>
+		
+			<li>
+				<a href="#method_metaForRelationship">metaForRelationship</a>
+			</li>
+		
+			<li>
+				<a href="#method_relationshipKind">relationshipKind</a>
+			</li>
+		
+			<li>
+				<a href="#method_reload">reload</a>
+			</li>
+		
+			<li>
+				<a href="#method_rollback">rollback</a>
+			</li>
+		
+			<li>
+				<a href="#method_rollbackAttributes">rollbackAttributes</a>
+			</li>
+		
+			<li>
+				<a href="#method_save">save</a>
+			</li>
+		
+	</ul>
+			</div>
+			<div class="tab-pane" id="properties">
+				<div class="api-property" id="property_attributes">
+		<h4 class="property-name">
+			<strong>attributes</strong>
+			<small>
+				<a>&#123;Set&#125;</a>
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L65">
+				src/model/attribute.js:65
+			</a>
+		</small>
+		<p><p>A set of all of the attribute names for this model.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_id">
+		<h4 class="property-name">
+			<strong>id</strong>
+			<small>
+				<a>&#123;String&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L41">
+				src/model/model.js:41
+			</a>
+		</small>
+		<p><p>The ID of the record. The ID can only be changed once, and only if
+it&#39;s being changed from a temporary ID to a permanent one. Only the
+store should change the ID from a temporary one to a permanent one.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_store">
+		<h4 class="property-name">
+			<strong>store</strong>
+			<small>
+				<a>&#123;EmberGraph.Store&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L70">
+				src/model/model.js:70
+			</a>
+		</small>
+		<p></p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_temporaryIdPrefix">
+		<h4 class="property-name">
+			<strong>temporaryIdPrefix</strong>
+			<small>
+				<a>&#123;String&#125;</a>
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L206">
+				src/model/model.js:206
+			</a>
+		</small>
+		<p><p>The prefix added to generated IDs to show that the prefix wasn&#39;t given
+by the server and is only temporary until the real one comes in.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_typeKey">
+		<h4 class="property-name">
+			<strong>typeKey</strong>
+			<small>
+				<a>&#123;String&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L22">
+				src/model/model.js:22
+			</a>
+		</small>
+		<p><p>This property is available on every model instance and every
+model subclass (after being looked up at least once by the
+container). This is the key that you use to refer to the model
+in relationships and store methods. Examples:</p>
+<pre><code>App.User =&gt; user
+App.PostComment =&gt; postComment
+</code></pre></p>
+
+		
+	</div>
+			</div>
+			<div class="tab-pane" id="methods">
+				<div class="api-method" id="method_changedAttributes">
+		<h4 class="property-name">
+			<strong>changedAttributes</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+					<a>&#123;Object&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L159">
+				src/model/attribute.js:159
+			</a>
+		</small>
+		<p><p>Returns an object that contains every attribute
+that has been changed since the last save.</p>
+</p>
+
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Object&#125;</a><br>
+						
+							<span>Keys are attribute names, values are arrays with [oldVal, newVal]</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_destroy">
+		<h4 class="property-name">
+			<strong>destroy</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L161">
+				src/model/model.js:161
+			</a>
+		</small>
+		<p><p>Proxies the store&#39;s delete method for convenience.</p>
+</p>
+
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;&#125;</a><br>
+						
+							<span>Promise</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_eachAttribute">
+		<h4 class="property-name">
+			<strong>eachAttribute</strong>
+			<small>
+				<span>
+					(callback, binding)
+				</span>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L111">
+				src/model/attribute.js:111
+			</a>
+		</small>
+		<p><p>Calls the callback for each attribute defined on the model.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>callback</strong>
+						<small>
+							<a>&#123;Function&#125;</a><br>
+							
+								<span>Function that takes <code>name</code> and <code>meta</code> parameters</span>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>binding</strong>
+						<small>
+							<a>&#123;&#125;</a><br>
+							
+								<span>Object to use as <code>this</code></span>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_eachRelationship">
+		<h4 class="property-name">
+			<strong>eachRelationship</strong>
+			<small>
+				<span>
+					(callback, binding)
+				</span>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/relationship.js#L73">
+				src/model/relationship.js:73
+			</a>
+		</small>
+		<p><p>Calls the callback for each relationship defined on the model.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>callback</strong>
+						<small>
+							<a>&#123;Function&#125;</a><br>
+							
+								<span>Function that takes <code>name</code> and <code>meta</code> parameters</span>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>binding</strong>
+						<small>
+							<a>&#123;&#125;</a><br>
+							
+								<span>Object to use as <code>this</code></span>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_extend">
+		<h4 class="property-name">
+			<strong>extend</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L232">
+				src/model/model.js:232
+			</a>
+		</small>
+		<p></p>
+
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_isAttribute">
+		<h4 class="property-name">
+			<strong>isAttribute</strong>
+			<small>
+				<span>
+					(propertyName)
+				</span>
+				
+					<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L100">
+				src/model/attribute.js:100
+			</a>
+		</small>
+		<p></p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>propertyName</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Boolean&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_isEqual">
+		<h4 class="property-name">
+			<strong>isEqual</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L179">
+				src/model/model.js:179
+			</a>
+		</small>
+		<p><p>Determines if the other object is a model that represents the same record.</p>
+</p>
+
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;&#125;</a><br>
+						
+							<span>Boolean</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_isTemporaryId">
+		<h4 class="property-name">
+			<strong>isTemporaryId</strong>
+			<small>
+				<span>
+					(id)
+				</span>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L216">
+				src/model/model.js:216
+			</a>
+		</small>
+		<p></p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>id</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;&#125;</a><br>
+						
+							<span>Boolean</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_loadData">
+		<h4 class="property-name">
+			<strong>loadData</strong>
+			<small>
+				<span>
+					(json)
+				</span>
+				
+				
+				
+				
+				
+					<code>deprecated</code>
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L77">
+				src/model/model.js:77
+			</a>
+		</small>
+		<p><p>Loads JSON data from the server into the record. This may be used when
+the record is brand new, or when the record is being reloaded. This
+should generally only be used by the store or for testing purposes.
+However, this can be useful to override to intercept data before it&#39;s
+loaded into the record;</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>json</strong>
+						<small>
+							<a>&#123;Object&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_loadDataFromClient">
+		<h4 class="property-name">
+			<strong>loadDataFromClient</strong>
+			<small>
+				<span>
+					(json)
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L108">
+				src/model/model.js:108
+			</a>
+		</small>
+		<p><p>Takes the data passed to the store&#39;s <a href="/api/Store.html#method_createRecord">createRecord</a>
+method and loads it into the newly created record by calling the model&#39;s
+public API methods for manipulating records. This should really only be
+called by the store and when a record is brand new.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>json</strong>
+						<small>
+							<a>&#123;Object&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_loadDataFromServer">
+		<h4 class="property-name">
+			<strong>loadDataFromServer</strong>
+			<small>
+				<span>
+					(json)
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L90">
+				src/model/model.js:90
+			</a>
+		</small>
+		<p><p>Takes a payload from the server and merges the data into the current data.
+This is generally only called by the store, but it may be useful to
+override it if you&#39;re looking to intercept and modify server data before
+it&#39;s loaded into the record.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>json</strong>
+						<small>
+							<a>&#123;Object&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_metaForAttribute">
+		<h4 class="property-name">
+			<strong>metaForAttribute</strong>
+			<small>
+				<span>
+					(attributeName)
+				</span>
+				
+					<a>&#123;Object&#125;</a>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L89">
+				src/model/attribute.js:89
+			</a>
+		</small>
+		<p><p>Just a more semantic alias for <code>metaForProperty</code></p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>attributeName</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Object&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_metaForRelationship">
+		<h4 class="property-name">
+			<strong>metaForRelationship</strong>
+			<small>
+				<span>
+					(relationshipName)
+				</span>
+				
+					<a>&#123;Object&#125;</a>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/relationship.js#L49">
+				src/model/relationship.js:49
+			</a>
+		</small>
+		<p><p>Fetch the metadata for a relationship property.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>relationshipName</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Object&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_relationshipKind">
+		<h4 class="property-name">
+			<strong>relationshipKind</strong>
+			<small>
+				<span>
+					(name)
+				</span>
+				
+					<a>&#123;String&#125;</a>
+				
+				
+					<code>static</code>
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/relationship.js#L60">
+				src/model/relationship.js:60
+			</a>
+		</small>
+		<p><p>Determines the kind (multiplicity) of the given relationship.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>name</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;String&#125;</a><br>
+						
+							<span>`hasMany` or `hasOne`</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_reload">
+		<h4 class="property-name">
+			<strong>reload</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L146">
+				src/model/model.js:146
+			</a>
+		</small>
+		<p><p>Proxies the store&#39;s reload method for convenience.</p>
+</p>
+
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;&#125;</a><br>
+						
+							<span>Promise</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_rollback">
+		<h4 class="property-name">
+			<strong>rollback</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L193">
+				src/model/model.js:193
+			</a>
+		</small>
+		<p><p>Rolls back changes to both attributes and relationships.</p>
+</p>
+
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_rollbackAttributes">
+		<h4 class="property-name">
+			<strong>rollbackAttributes</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/attribute.js#L188">
+				src/model/attribute.js:188
+			</a>
+		</small>
+		<p><p>Resets all attribute changes to last known server attributes.</p>
+</p>
+
+		
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_save">
+		<h4 class="property-name">
+			<strong>save</strong>
+			<small>
+				<span>
+					()
+				</span>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/model.js#L124">
+				src/model/model.js:124
+			</a>
+		</small>
+		<p><p>Proxies the store&#39;s save method for convenience.</p>
+</p>
+
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;&#125;</a><br>
+						
+							<span>Promise</span>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+			</div>
+		</div>
+	</div>
+			
+		</div>
+	</div>
+</div>
+
+		<footer>
+			<hr>
+			<a class="text-muted">&copy; Copyright Gordon Kristan 2014.</a>
+		</footer>
+
+
+		<script src="../javascripts/jquery.min.js"></script>
+		<script src="../javascripts/bootstrap.min.js"></script>
+		<script src="../javascripts/api.js"></script>
+	</body>
+</html>

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Ember-Graph</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic'
+		      rel='stylesheet' type='text/css'>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="../stylesheets/style.css">
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="http://ember-graph.com" target="ext">
+						<b>Ember-Graph</b>
+					</a>
+					<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Guides</a></li>
+						<li class="active"><a href="#">API</a></li>
+					</ul>
+					<ul class="nav pull-right navbar-nav">
+						<li>
+							<a href="https://github.com/gordonkristan/ember-graph">
+								<i class="fa fa-lg fa-github"></i> View on GitHub
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+	<div class="row">
+		<div class="col-md-3 well side-nav">
+			<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Namespaces</strong>
+		</h4>
+	</li>
+	<li class="">
+		<a href="EG.html"><small>EmberGraph</small></a>
+	</li>
+	<li class="">
+		<a href="#"><small>String</small></a>
+	</li>
+</ul>
+
+<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Classes</strong>
+		</h4>
+	</li>
+	
+		<li class="">
+			<a href="Adapter.html">
+				<small>Adapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ArrayType.html">
+				<small>ArrayType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="AttributeType.html">
+				<small>AttributeType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="BooleanType.html">
+				<small>BooleanType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="DateType.html">
+				<small>DateType</small>
+			</a>
+		</li>
+	
+		<li class="active">
+			<a href="EmberGraphDatabase.html">
+				<small>EmberGraphDatabase</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabaseAdapter.html">
+				<small>EmberGraphDatabaseAdapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabaseSerializer.html">
+				<small>EmberGraphDatabaseSerializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EnumType.html">
+				<small>EnumType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="JSONSerializer.html">
+				<small>JSONSerializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Model.html">
+				<small>Model</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ModelPromiseObject.html">
+				<small>ModelPromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="NumberType.html">
+				<small>NumberType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ObjectType.html">
+				<small>ObjectType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseArray.html">
+				<small>PromiseArray</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseObject.html">
+				<small>PromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="RESTAdapter.html">
+				<small>RESTAdapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Serializer.html">
+				<small>Serializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Store.html">
+				<small>Store</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="StringType.html">
+				<small>StringType</small>
+			</a>
+		</li>
+	
+</ul>
+		</div>
+		<div class="col-md-9 api-contents">
+			
+				
+					<div class="api-page-header">
+						<h1>
+							<i class="fa fa-code"></i> EmberGraphDatabase Class
+						</h1>
+						<hr>
+					</div>
+
+					<div class="api-metadata">
+						
+							<strong>Extends:</strong>
+							<a href="#">
+								Object
+							</a>
+							<br>
+						
+
+						
+
+						<strong>Defined in:</strong>
+						<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L1">
+							src/database/ember_graph_database.js:1
+						</a>
+					</div>
+					<br>
+					<p><p>This is an interface that can be implemented to provide a persistence
+engine for an Ember-Graph application. The engine doesn&#39;t have to
+know anything about Ember-Graph or relationships in order to function,
+it just needs to be able to store and retrieve records and relationships
+by type and ID. If you can implement the basic storage functionality,
+<a href="/api/EmberGraphDatabaseAdapter.html">EmberGraphDatabaseAdapter</a> will take care of ensuring
+relationship integrity. Two good use cases are in memory and local
+storage persistence. (Both of which come with Ember-Graph in the
+<a href="/api/MemoryAdapter.html">MemoryAdapter</a> and
+<a href="/api/LocalStorageAdapter.html">LocalStorageAdapter</a>).</p>
+<p>There are two JSON data types that the persistence engine must store and
+retrieve: records and relationships. Records holds attributes and
+relationships hold data describing which records it links to. Examples
+of both can be found below.</p>
+<p>Record:</p>
+<pre><code class="lang-json">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"94"</span></span>,
+    "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"First Post"</span></span>,
+    "<span class="hljs-attribute">posted_on</span>": <span class="hljs-value"><span class="hljs-number">1402870305305</span>
+</span>}
+</code></pre>
+<p>Relationship:</p>
+<pre><code class="lang-json">{
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"3"</span></span>,
+    "<span class="hljs-attribute">typeKey1</span>": <span class="hljs-value"><span class="hljs-string">"post"</span></span>,
+    "<span class="hljs-attribute">id1</span>": <span class="hljs-value"><span class="hljs-string">"94"</span></span>,
+    "<span class="hljs-attribute">relationship1</span>": <span class="hljs-value"><span class="hljs-string">"comments"</span></span>,
+    "<span class="hljs-attribute">typeKey2</span>": <span class="hljs-value"><span class="hljs-string">"comment"</span></span>,
+    "<span class="hljs-attribute">id2</span>": <span class="hljs-value"><span class="hljs-string">"160"</span></span>,
+    "<span class="hljs-attribute">relationship2</span>": <span class="hljs-value"><span class="hljs-string">"post"</span>
+</span>}
+</code></pre>
+</p>
+				
+			
+
+			
+
+			
+				<div class="api-index">
+		<ul class="nav nav-tabs nav-justified">
+			<li>
+				<a href="#index">Index</a>
+			</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+		</ul>
+
+		<div class="tab-content contents">
+			<div class="tab-pane active" id="index">
+				<h3>Methods</h3>
+
+	<ul class="list-unstyled">
+		
+			<li>
+				<a href="#method_applyChanges">applyChanges</a>
+			</li>
+		
+			<li>
+				<a href="#method_getRecord">getRecord</a>
+			</li>
+		
+			<li>
+				<a href="#method_getRecords">getRecords</a>
+			</li>
+		
+			<li>
+				<a href="#method_getRecordsOfType">getRecordsOfType</a>
+			</li>
+		
+			<li>
+				<a href="#method_queryRecords">queryRecords</a>
+			</li>
+		
+	</ul>
+			</div>
+			<div class="tab-pane" id="properties">
+				
+			</div>
+			<div class="tab-pane" id="methods">
+				<div class="api-method" id="method_applyChanges">
+		<h4 class="property-name">
+			<strong>applyChanges</strong>
+			<small>
+				<span>
+					(recordChanges, relationshipChanges)
+				</span>
+				
+					<a>&#123;Promise&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L94">
+				src/database/ember_graph_database.js:94
+			</a>
+		</small>
+		<p><p>Atomically applies a set of changes. Either all of the changes
+should succeed or they should all fail.  If they aren&#39;t applied
+together, the relationships could be left in an inconsistent
+state.</p>
+<p>The <code>recordChanges</code> parameter is a list of objects that contain
+the following properties:</p>
+<ul>
+<li><code>typeKey</code>: The type of record to change.</li>
+<li><code>id</code>: The ID of the record to change.</li>
+<li><code>data</code>: The new state of the record. (If <code>undefined</code>, delete the record.)</li>
+</ul>
+<p>The <code>relationshipChanges</code> parameter is a list of objects that
+contain the following properties:</p>
+<ul>
+<li><code>id</code>: The ID of the relationship to add/delete.</li>
+<li><code>data</code>: The new relationship. (If <code>undefined</code>, delete the relationship.)</li>
+</ul>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>recordChanges</strong>
+						<small>
+							<a>&#123;Object[]&#125;</a><br>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>relationshipChanges</strong>
+						<small>
+							<a>&#123;Object[]&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Promise&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_getRecord">
+		<h4 class="property-name">
+			<strong>getRecord</strong>
+			<small>
+				<span>
+					(typeKey, id)
+				</span>
+				
+					<a>&#123;Promise&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L47">
+				src/database/ember_graph_database.js:47
+			</a>
+		</small>
+		<p><p>Fetches a single record, along with its relationships, from
+the database. The resolved object should have a <code>record</code>
+property that holds the record, and a <code>relationships</code> property
+that holds all of the relationships that connect to the record.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>typeKey</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>id</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Promise&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_getRecords">
+		<h4 class="property-name">
+			<strong>getRecords</strong>
+			<small>
+				<span>
+					(typeKey, ids)
+				</span>
+				
+					<a>&#123;Promise&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L60">
+				src/database/ember_graph_database.js:60
+			</a>
+		</small>
+		<p><p>Similar to <a href="/api/EmberGraphDatabase.html#method_getRecord">getRecord</a>,
+only it returns an array of objects that represent records.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>typeKey</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>ids</strong>
+						<small>
+							<a>&#123;String[]&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Promise&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_getRecordsOfType">
+		<h4 class="property-name">
+			<strong>getRecordsOfType</strong>
+			<small>
+				<span>
+					(typeKey)
+				</span>
+				
+					<a>&#123;Promise&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L71">
+				src/database/ember_graph_database.js:71
+			</a>
+		</small>
+		<p><p>Similar to <a href="/api/EmberGraphDatabase.html#method_getRecord">getRecord</a>,
+only it returns an array of objects that contains every
+record of the given type.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>typeKey</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Promise&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_queryRecords">
+		<h4 class="property-name">
+			<strong>queryRecords</strong>
+			<small>
+				<span>
+					(typeKey, query)
+				</span>
+				
+					<a>&#123;Promise&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/database/ember_graph_database.js#L82">
+				src/database/ember_graph_database.js:82
+			</a>
+		</small>
+		<p><p>Similar to <a href="/api/EmberGraphDatabase.html#method_getRecord">getRecord</a>,
+only it returns an array of objects that contains all of
+the records that matched the given query.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>typeKey</strong>
+						<small>
+							<a>&#123;String&#125;</a><br>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>query</strong>
+						<small>
+							<a>&#123;Object&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Promise&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+			</div>
+		</div>
+	</div>
+			
+		</div>
+	</div>
+</div>
+
+		<footer>
+			<hr>
+			<a class="text-muted">&copy; Copyright Gordon Kristan 2014.</a>
+		</footer>
+
+
+		<script src="../javascripts/jquery.min.js"></script>
+		<script src="../javascripts/bootstrap.min.js"></script>
+		<script src="../javascripts/api.js"></script>
+	</body>
+</html>

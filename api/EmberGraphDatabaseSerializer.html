@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Ember-Graph</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic'
+		      rel='stylesheet' type='text/css'>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="../stylesheets/style.css">
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="http://ember-graph.com" target="ext">
+						<b>Ember-Graph</b>
+					</a>
+					<a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="glyphicon glyphicon-chevron-down"></span>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Guides</a></li>
+						<li class="active"><a href="#">API</a></li>
+					</ul>
+					<ul class="nav pull-right navbar-nav">
+						<li>
+							<a href="https://github.com/gordonkristan/ember-graph">
+								<i class="fa fa-lg fa-github"></i> View on GitHub
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+	<div class="row">
+		<div class="col-md-3 well side-nav">
+			<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Namespaces</strong>
+		</h4>
+	</li>
+	<li class="">
+		<a href="EG.html"><small>EmberGraph</small></a>
+	</li>
+	<li class="">
+		<a href="#"><small>String</small></a>
+	</li>
+</ul>
+
+<ul class="list-unstyled">
+	<li>
+		<h4>
+			<strong>Classes</strong>
+		</h4>
+	</li>
+	
+		<li class="">
+			<a href="Adapter.html">
+				<small>Adapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ArrayType.html">
+				<small>ArrayType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="AttributeType.html">
+				<small>AttributeType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="BooleanType.html">
+				<small>BooleanType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="DateType.html">
+				<small>DateType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabase.html">
+				<small>EmberGraphDatabase</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EmberGraphDatabaseAdapter.html">
+				<small>EmberGraphDatabaseAdapter</small>
+			</a>
+		</li>
+	
+		<li class="active">
+			<a href="EmberGraphDatabaseSerializer.html">
+				<small>EmberGraphDatabaseSerializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="EnumType.html">
+				<small>EnumType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="JSONSerializer.html">
+				<small>JSONSerializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Model.html">
+				<small>Model</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ModelPromiseObject.html">
+				<small>ModelPromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="NumberType.html">
+				<small>NumberType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="ObjectType.html">
+				<small>ObjectType</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseArray.html">
+				<small>PromiseArray</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="PromiseObject.html">
+				<small>PromiseObject</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="RESTAdapter.html">
+				<small>RESTAdapter</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Serializer.html">
+				<small>Serializer</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="Store.html">
+				<small>Store</small>
+			</a>
+		</li>
+	
+		<li class="">
+			<a href="StringType.html">
+				<small>StringType</small>
+			</a>
+		</li>
+	
+</ul>
+		</div>
+		<div class="col-md-9 api-contents">
+			
+				
+					<div class="api-page-header">
+						<h1>
+							<i class="fa fa-code"></i> EmberGraphDatabaseSerializer Class
+						</h1>
+						<hr>
+					</div>
+
+					<div class="api-metadata">
+						
+							<strong>Extends:</strong>
+							<a href="#">
+								Serializer
+							</a>
+							<br>
+						
+
+						
+
+						<strong>Defined in:</strong>
+						<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/serializer/ember_graph_database.js#L1">
+							src/serializer/ember_graph_database.js:1
+						</a>
+					</div>
+					<br>
+					<p></p>
+				
+			
+
+			
+
+			
+				<div class="api-index">
+		<ul class="nav nav-tabs nav-justified">
+			<li>
+				<a href="#index">Index</a>
+			</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+		</ul>
+
+		<div class="tab-content contents">
+			<div class="tab-pane active" id="index">
+				<h3>Properties</h3>
+
+	<ul class="list-unstyled">
+		
+			<li>
+				<a href="#property_isCreating">isCreating</a>
+			</li>
+		
+			<li>
+				<a href="#property_isDeleted">isDeleted</a>
+			</li>
+		
+			<li>
+				<a href="#property_isDeleting">isDeleting</a>
+			</li>
+		
+			<li>
+				<a href="#property_isDirty">isDirty</a>
+			</li>
+		
+			<li>
+				<a href="#property_isInTransit">isInTransit</a>
+			</li>
+		
+			<li>
+				<a href="#property_isLoaded">isLoaded</a>
+			</li>
+		
+			<li>
+				<a href="#property_isNew">isNew</a>
+			</li>
+		
+			<li>
+				<a href="#property_isReloading">isReloading</a>
+			</li>
+		
+			<li>
+				<a href="#property_isSaving">isSaving</a>
+			</li>
+		
+			<li>
+				<a href="#property_store">store</a>
+			</li>
+		
+	</ul>
+
+
+
+	<h3>Methods</h3>
+
+	<ul class="list-unstyled">
+		
+			<li>
+				<a href="#method_deserialize">deserialize</a>
+			</li>
+		
+			<li>
+				<a href="#method_serialize">serialize</a>
+			</li>
+		
+	</ul>
+			</div>
+			<div class="tab-pane" id="properties">
+				<div class="api-property" id="property_isCreating">
+		<h4 class="property-name">
+			<strong>isCreating</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L61">
+				src/model/states.js:61
+			</a>
+		</small>
+		<p><p>Denotes that the record is currently being saved to the server for the first time,
+and the server hasn&#39;t responded yet.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isDeleted">
+		<h4 class="property-name">
+			<strong>isDeleted</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L12">
+				src/model/states.js:12
+			</a>
+		</small>
+		<p><p>Denotes that a record has been deleted and the change persisted to the server.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isDeleting">
+		<h4 class="property-name">
+			<strong>isDeleting</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L3">
+				src/model/states.js:3
+			</a>
+		</small>
+		<p><p>Denotes that the record is currently being deleted, but the server hasn&#39;t responded yet.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isDirty">
+		<h4 class="property-name">
+			<strong>isDirty</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L51">
+				src/model/states.js:51
+			</a>
+		</small>
+		<p><p>Denotes that the record has attribute or relationship changes that have not been saved to the server yet.
+Note: A new record is always dirty.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isInTransit">
+		<h4 class="property-name">
+			<strong>isInTransit</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L83">
+				src/model/states.js:83
+			</a>
+		</small>
+		<p><p>Denotes that the record is currently waiting for the server to respond to an operation.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isLoaded">
+		<h4 class="property-name">
+			<strong>isLoaded</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L40">
+				src/model/states.js:40
+			</a>
+		</small>
+		<p><p>Denotes that a record has been loaded into a store and isn&#39;t freestanding.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isNew">
+		<h4 class="property-name">
+			<strong>isNew</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L71">
+				src/model/states.js:71
+			</a>
+		</small>
+		<p><p>Denotes that a record has just been created and has not been saved to
+the server yet. Most likely has a temporary ID if this is true.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isReloading">
+		<h4 class="property-name">
+			<strong>isReloading</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L31">
+				src/model/states.js:31
+			</a>
+		</small>
+		<p><p>Denotes that the record is being reloaded from the server, but the server hasn&#39;t responded yet.</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_isSaving">
+		<h4 class="property-name">
+			<strong>isSaving</strong>
+			<small>
+				<a>&#123;Boolean&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/model/states.js#L21">
+				src/model/states.js:21
+			</a>
+		</small>
+		<p><p>Denotes that the record is currently saving its changes to the server, but the server hasn&#39;t responded yet.
+(This doesn&#39;t overlap with <code>isCreating</code> at all. This is only true on subsequent saves.)</p>
+</p>
+
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-property" id="property_store">
+		<h4 class="property-name">
+			<strong>store</strong>
+			<small>
+				<a>&#123;Store&#125;</a>
+				
+				
+					<code>read only</code>
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/serializer/serializer.js#L14">
+				src/serializer/serializer.js:14
+			</a>
+		</small>
+		<p><p>The store that the records will be loaded into. This
+property is injected by the container on startup.
+This can be used for fetching models and their metadata.</p>
+</p>
+
+		
+	</div>
+			</div>
+			<div class="tab-pane" id="methods">
+				<div class="api-method" id="method_deserialize">
+		<h4 class="property-name">
+			<strong>deserialize</strong>
+			<small>
+				<span>
+					(json, options)
+				</span>
+				
+					<a>&#123;Object&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/serializer/ember_graph_database.js#L32">
+				src/serializer/ember_graph_database.js:32
+			</a>
+		</small>
+		<p><p>Deserializes the attributes in the given JSON.
+Requires the <code>recordType</code> option.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>json</strong>
+						<small>
+							<a>&#123;JSON&#125;</a><br>
+							
+						</small>
+					</li>
+				
+					<li>
+						<strong>options</strong>
+						<small>
+							<a>&#123;Object&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;Object&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+
+	
+		<hr>
+	
+
+	<div class="api-method" id="method_serialize">
+		<h4 class="property-name">
+			<strong>serialize</strong>
+			<small>
+				<span>
+					(record)
+				</span>
+				
+					<a>&#123;JSON&#125;</a>
+				
+				
+				
+				
+				
+				
+			</small>
+		</h4>
+		<small>Defined in:
+			<a href="https://github.com/gordonkristan/ember-graph/blob/master/src/serializer/ember_graph_database.js#L8">
+				src/serializer/ember_graph_database.js:8
+			</a>
+		</small>
+		<p><p>Converts a record to its JSON format. The JSON
+contains only the ID and serialized attributes.</p>
+</p>
+
+		
+			<h4><strong>Parameters</strong>:</h4>
+			<ul class="list-unstyled parameter-list">
+				
+					<li>
+						<strong>record</strong>
+						<small>
+							<a>&#123;Model&#125;</a><br>
+							
+						</small>
+					</li>
+				
+			</ul>
+		
+
+		
+			<h4><strong>Returns</strong>:</h4>
+			<ul class="list-unstyled return-value">
+				<li>
+					<small>
+						<a>&#123;JSON&#125;</a><br>
+						
+					</small>
+				</li>
+			</ul>
+		
+	</div>
+			</div>
+		</div>
+	</div>
+			
+		</div>
+	</div>
+</div>
+
+		<footer>
+			<hr>
+			<a class="text-muted">&copy; Copyright Gordon Kristan 2014.</a>
+		</footer>
+
+
+		<script src="../javascripts/jquery.min.js"></script>
+		<script src="../javascripts/bootstrap.min.js"></script>
+		<script src="../javascripts/api.js"></script>
+	</body>
+</html>
